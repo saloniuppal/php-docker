@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index file</title>
+</head>
+<body>
+{{ the|striptags|title }}
+{{ go|striptags|title }}
+</br>
+{% for i in range(0, 3) %}
+{{ i }},
+{% endfor %}
+
+{{ "now"|date(null, "Europe/Paris") }}
+{{ "now"|date('d/m/Y H:i', timezone="Europe/Paris") }}
+
+greeting = 'Hello ' %}
+{% set name = 'Fabien' %}
+
+{{ greeting ~ name|lower }}   {# Hello fabien #}
+
+{# use parenthesis to change precedence #}
+{{ (greeting ~ name)|lower }} {# hello fabien #}
+
+{% if 'Fabien' starts with 'F' %}
+{% endif %}
+
+{% if 'Fabien' ends with 'n' %}
+{% endif %}
+
+{% if phone matches '/^[\\d\\.]+$/' %}
+{% endif %}
+
+<input type="text" nam="username" value="" size="" />
+</body>
+</html>
